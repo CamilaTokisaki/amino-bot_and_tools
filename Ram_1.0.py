@@ -1,4 +1,4 @@
-### Bot Amino V1.2 by CamilaTokisaki and enchart
+### Bot Amino V1.0 by CamilaTokisaki and enchart
 
 import amino
 import random
@@ -8,7 +8,7 @@ from threading import Thread
 
 client = amino.Client()
 client.login(email="тут пишите логин от аккаунта где будет бот", password="тут пишите пароль от аккаунта где будет бот")
-sub_client = amino.SubClient(comId='10349519', profile=client.profile)
+sub_client = amino.SubClient(comId='айди амиино где будет работать ваш бот', profile=client.profile)
 reloadTime = time.time() + 120
 
 @client.callbacks.event("on_text_message")
@@ -126,7 +126,7 @@ info_bot-создатели Ram
 
         if content[0] == "info":
             sub_client.send_message(message='''
-[B]Обновления: 1.2 (дополнение)
+[B]Обновления: 1.0 (дополнение)
 
 1. Добавлена функция "действия"
 2. Приветствие новых людей в сообществе
@@ -137,7 +137,7 @@ info_bot-создатели Ram
 ''', chatId=chatId)
         if content[0] == "info_bot":
             sub_client.send_message(message='''
-Версия бота 1.2
+Версия бота 1.0
 
 Создатели: 
 
@@ -150,6 +150,7 @@ enchart
 
 Вк:
 
+CamilaTokisaki:
 https://vk.com/violetta_bowten
             ''', chatId=chatId, replyTo=id)
 
