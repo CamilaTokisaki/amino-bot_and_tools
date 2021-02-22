@@ -164,9 +164,9 @@ https://vk.com/violetta_bowten
 #зачистка-удаленить 10 сообщений
 #""", chatId=chatId, replyTo=id)
 #        if content[0] == "night":
-#            sub_client.send_message(message="*зевая* Спокойной ночи сладкие мои~", chatId="fdfaad0b-99d6-426c-b942-61e4c01fadfb")
+#            sub_client.send_message(message="*зевая* Спокойной ночи сладкие мои~", chatId=chatId)
 #        if content[0] == "morn":
-#            sub_client.send_message(message="*потираея сонные глазки улыбаясь* Доброе утро лапочки~", chatId="fdfaad0b-99d6-426c-b942-61e4c01fadfb")
+#            sub_client.send_message(message="*потираея сонные глазки улыбаясь* Доброе утро лапочки~", chatId=cahtId)
 
 #        if content[0] == "зачистка":
 #            if data.message.author.role != 0:
