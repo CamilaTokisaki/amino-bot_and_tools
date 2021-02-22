@@ -141,8 +141,6 @@ info_bot-создатели Ram
 
 Создатели: 
 
-
-
 Дискорд:
 
 CamilaTokisaki#9903
