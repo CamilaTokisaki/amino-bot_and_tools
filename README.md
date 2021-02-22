@@ -8,6 +8,8 @@ now, run CMD as an administrator and write pip install --upgrade Amino. py= = 1.
 
 That's it! now just move the code file to the cmd line and click Enter!
 
+about the file lear.py To find out the Amino id, you need to log in to the bot's account manually and go to the community where it will work, and then run lear.py, the console will display the ID, it remains to throw it in Ram.py and launch the bot, done
+
 If you have any ideas/questions/suggestions/problems, then write to me either in discord, or here, in github, and remember, I only have two hands! so just wait, sooner or later I will answer you
 
 Help for you: All my codes were originally developed for the Russian audience, I have no desire to engage in localization, at least at the moment, if there are many requests for this, then I will completely localize the bot to English, starting with the new version, if of course this bot will be needed by many
