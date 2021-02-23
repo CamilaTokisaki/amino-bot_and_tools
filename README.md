@@ -4,7 +4,7 @@ It is worth noting in advance that to run the bot, it is desirable to need a com
 To install python on your system, you need to find a suitable video on YouTube and have this site with you https://www.python.org/downloads/
 After installing python, you will need to install Amino.py
 what? you don't know how to do this? well, I will tell you the method for Windows, although it is also suitable for Linux, but there are slightly different manipulations needed
-now, run CMD as an administrator and write pip install --upgrade Amino. py= = 1.2.8
+now, run CMD as an administrator and write pip install --upgrade Amino. py== 1.2.8
 
 That's it! now just move the code file to the cmd line and click Enter!
 
