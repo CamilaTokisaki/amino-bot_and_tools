@@ -1,3 +1,5 @@
+This project is closed due to its lack of prospects and lack of ideas, so do not wait for updates
+
 Hello everyone, this is an Amino bot named Ram, I hope when using it you will not have any problems and you will experience pleasure in its operation, but when creating it, I experienced contentment
 
 It is worth noting in advance that to run the bot, it is desirable to need a computer (you can use a phone, but this is another story)
