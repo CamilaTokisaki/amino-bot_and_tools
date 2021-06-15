@@ -16,6 +16,6 @@ pip install websocket_client==0.57.0
 
 That's it! now just move the code file to the cmd line and click Enter!
 
-about the Lear.py file To find out the Amino identifier, you need to log into the bot account manually and Join the community where it will work, and then, launch Lear.py, the identifier will be displayed in the console, upload it to Ram.py or your bot, and launch the bot, done
+about the amino-community-id.py file To find out the Amino identifier, you need to log into the bot account manually and Join the community where it will work, and then, launch Lear.py, the identifier will be displayed in the console, upload it to Ram.py or your bot, and launch the bot, done
 
 If you have any ideas / questions / suggestions / problems, then write to me either on Discord or here on github, and remember, I only have two hands! so wait, sooner or later I will answer you
