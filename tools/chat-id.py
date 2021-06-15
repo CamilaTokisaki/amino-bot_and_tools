@@ -1,4 +1,5 @@
 import amino
+
 client = amino.Client()
 client.login(email='your mail', password='your password')
 sub_client = amino.SubClient(comId='id community', profile=client.profile)
