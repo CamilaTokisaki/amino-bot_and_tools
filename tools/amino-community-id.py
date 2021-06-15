@@ -1,4 +1,5 @@
 import amino
+
 client = amino.Client()
 client.login(email='', password='')
 
