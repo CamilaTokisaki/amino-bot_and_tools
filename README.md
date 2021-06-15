@@ -1,5 +1,7 @@
 This project was closed due to hopelessness and lack of ideas, so do not wait for updates
 
+for people who do not speak English, there is another instruction https://github.com/CamilaTokisaki/amino-bot-tools/blob/main/READMErus.md
+
 Hello everyone, this is a minimal set of tools to help you create a bot for Amino, as well as a bot named Ram, I hope you will not have any problems using it and you will enjoy your work
 
 It is worth noting in advance that to launch a bot or tools, it is advisable to use a computer (you can also use a phone, but that's another story).
