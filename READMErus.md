@@ -11,9 +11,9 @@
 pip install Amino.py
 
 Если не запуск был неудачен, или вы хотите запустить Рам, напишите это
-pip install Amino.py == 1.2.12.1
-piprequests == 2.24.0
-pip install websocket_client == 0.57.0
+pip install Amino.py==1.2.12.1 
+pip install requests==2.24.0 
+pip install websocket_client==0.57.0
 
 Вот и всё! теперь просто переместите файл кода в строку cmd и нажмите Enter!
 
