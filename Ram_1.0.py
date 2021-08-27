@@ -1,27 +1,23 @@
-### Bot Amino V1.0 by CamilaTokisaki ###
-
 import threading
-import samino
 import random
+import amino
 import time
-import sys
-import os
 
 from threading import Thread
 
-client = samino.Client("Тут ваш девайсник")
-client.login(email="логин", password="пароль", isWeb=True)
+client = amino.Client()
 
-@client.event("on_message")
-def on_message(data: samino.lib.Event):
-    content = data.message.content
-    msgId = data.message.messageId
-    comId = data.ndcId
-    chatId = data.message.chatId
-    userId = data.message.userId
-    nickname = data.message.author.nickname
-    sub_client = samino.Local(comId)
-    print(f'{nickname}: {content}')
+client.login(email="тут пишите логин от аккаунта где будет бот", password="тут пишите пароль от аккаунта где будет бот")
+sub_client = amino.SubClient(comId='айди амиино где будет работать ваш бот', profile=client.profile)
+reloadTime = time.time() + 120
+
+@client.callbacks.event("on_text_message")
+def on_text_message(data):
+        chatId = data.message.chatId
+        nickname = data.message.author.nickname
+        content = data.message.content
+        id = data.message.messageId
+        print(nickname, content)
 
         lis = ['Думаю что да', 'Думаю что нет', 'Наверное', 'Уверена на Все 100%',
          'Точно нет', 'Да, почему бы и нет?', 'Скорее всего да, а хотя может и нет...', 'Я не знаю ответа на этот вопрос, я глупая',
@@ -31,9 +27,10 @@ def on_message(data: samino.lib.Event):
           'Ты лучший человек которого я видела!']
 
         lis3 = ['*обняла в ответ* спасибо, мне очень приятно что ты заботишься о мне~', 'Ня~ Как приятно~', '*обняла в ответ* Не отпускай меня...', '*обняла в ответ* Можно нам так стоять вместе вечно?..', '*обняла в ответ* Я люблю тебя..', '*обняла в ответ* :3', '*обняла в ответ* я счастлива~']
+
         content = str(content).split(" ")
 
-        if content[0] == "ram":
+        if content[0] == "ram":  
             sub_client.send_message(message="Привет! Я Рам, чем могу быть полезна?", chatId=chatId)
 
         if content[0] == "рам,":
@@ -131,20 +128,24 @@ info_bot-создатели Ram
         if content[0] == "info":
             sub_client.send_message(message='''
 [B]Обновления: 1.0 (дополнение)
-
 1. Добавлена функция "действия"
+2. Приветствие новых людей в сообществе
 2. Изменена информация о создателях
-
 [B]Удалено:
-
 1. Функция "game" из за ненадобности
 ''', chatId=chatId)
+
         if content[0] == "info_bot":
             sub_client.send_message(message='''
 Версия бота 1.0
-
+Создатели: 
 Создательница: 
-
+Дискорд:
+CamilaTokisaki#9903
+enchart
+Вк:
+CamilaTokisaki:
+https://vk.com/violetta_bowten
 CamilaTokisaki#0001
             ''', chatId=chatId, replyTo=id)
 
@@ -157,8 +158,10 @@ CamilaTokisaki#0001
 #night-пожелать спокойной ночи
 #зачистка-удаленить 10 сообщений
 #""", chatId=chatId, replyTo=id)
+
 #        if content[0] == "night":
 #            sub_client.send_message(message="*зевая* Спокойной ночи сладкие мои~", chatId=chatId)
+
 #        if content[0] == "morn":
 #            sub_client.send_message(message="*потираея сонные глазки улыбаясь* Доброе утро лапочки~", chatId=cahtId)
 
@@ -170,10 +173,12 @@ CamilaTokisaki#0001
 #        if [x for x in ['.tickle', '.kus', '.slap', '.poke', '.hug', '.cuddle', '.feed', '.kiss', '.pat', 'morn', 'night' ] if (x in content)]:
 #            sub_client.delete_message(reason="!чисткачата", chatId=data.message.chatId, messageId=data.message.messageId, asStaff=True)
 
-
-def reload():
-    while True:
-        time.sleep(240)
-        print("Перезагрузка...")
-        os.execl(sys.executable, sys.executable, *sys.argv)
-reload()
+while True:
+    if time.time() >= reloadTime:
+        print("Updating socket...")
+        try:
+            client.socket.close()
+            client.socket.start()
+        except:pass
+        print("Updated!")
+        reloadTime += 120
