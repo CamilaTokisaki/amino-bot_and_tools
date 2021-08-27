@@ -1,4 +1,4 @@
-### Bot Amino V1.0 by CamilaTokisaki and enchart
+### Bot Amino V1.0 by CamilaTokisaki ###
 
 import amino
 import random
@@ -129,7 +129,7 @@ info_bot-создатели Ram
 [B]Обновления: 1.0 (дополнение)
 
 1. Добавлена функция "действия"
-2. Приветствие новых людей в сообществе
+2. Изменена информация о создателях
 
 [B]Удалено:
 
@@ -139,17 +139,9 @@ info_bot-создатели Ram
             sub_client.send_message(message='''
 Версия бота 1.0
 
-Создатели: 
+Создательница: 
 
-Дискорд:
-
-CamilaTokisaki#9903
-enchart
-
-Вк:
-
-CamilaTokisaki:
-https://vk.com/violetta_bowten
+CamilaTokisaki#0001
             ''', chatId=chatId, replyTo=id)
 
 # Дальше идёт админ панель с командами для админов, если у бота есть звание Лидера то убирайте решотки с всех строк от 150 и до 169
