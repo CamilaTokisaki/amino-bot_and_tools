@@ -1,23 +1,27 @@
 ### Bot Amino V1.0 by CamilaTokisaki ###
 
-import amino
+import threading
+import samino
 import random
 import time
-import threading
+import sys
+import os
+
 from threading import Thread
 
-client = amino.Client()
-client.login(email="тут пишите логин от аккаунта где будет бот", password="тут пишите пароль от аккаунта где будет бот")
-sub_client = amino.SubClient(comId='айди амиино где будет работать ваш бот', profile=client.profile)
-reloadTime = time.time() + 120
+client = samino.Client("Тут ваш девайсник")
+client.login(email="логин", password="пароль", isWeb=True)
 
-@client.callbacks.event("on_text_message")
-def on_text_message(data):
-        chatId = data.message.chatId
-        nickname = data.message.author.nickname
-        content = data.message.content
-        id = data.message.messageId
-        print(nickname, content)
+@client.event("on_message")
+def on_message(data: samino.lib.Event):
+    content = data.message.content
+    msgId = data.message.messageId
+    comId = data.ndcId
+    chatId = data.message.chatId
+    userId = data.message.userId
+    nickname = data.message.author.nickname
+    sub_client = samino.Local(comId)
+    print(f'{nickname}: {content}')
 
         lis = ['Думаю что да', 'Думаю что нет', 'Наверное', 'Уверена на Все 100%',
          'Точно нет', 'Да, почему бы и нет?', 'Скорее всего да, а хотя может и нет...', 'Я не знаю ответа на этот вопрос, я глупая',
@@ -167,13 +171,9 @@ CamilaTokisaki#0001
 #            sub_client.delete_message(reason="!чисткачата", chatId=data.message.chatId, messageId=data.message.messageId, asStaff=True)
 
 
-while True:
-    if time.time() >= reloadTime:
-        print("Updating socket...")
-        try:
-            client.socket.close()
-            client.socket.start()
-        except:pass
-        print("Updated!")
-        reloadTime += 120
-
+def reload():
+    while True:
+        time.sleep(240)
+        print("Перезагрузка...")
+        os.execl(sys.executable, sys.executable, *sys.argv)
+reload()
