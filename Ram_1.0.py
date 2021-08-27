@@ -1,3 +1,5 @@
+### The creator of CamilaTokisaki ###
+
 import threading
 import random
 import amino
@@ -58,7 +60,7 @@ def on_text_message(data):
 
         if content[0] == "help":
             sub_client.send_message(message="""
-[B]Команды: 
+[B]Команды:
 adhelp-админ панель
 рам,-спросить Ram
 *обнять*-обнять рам
@@ -129,23 +131,19 @@ info_bot-создатели Ram
             sub_client.send_message(message='''
 [B]Обновления: 1.0 (дополнение)
 1. Добавлена функция "действия"
-2. Приветствие новых людей в сообществе
 2. Изменена информация о создателях
+
 [B]Удалено:
+
 1. Функция "game" из за ненадобности
 ''', chatId=chatId)
 
         if content[0] == "info_bot":
             sub_client.send_message(message='''
 Версия бота 1.0
-Создатели: 
+
 Создательница: 
-Дискорд:
-CamilaTokisaki#9903
-enchart
-Вк:
-CamilaTokisaki:
-https://vk.com/violetta_bowten
+
 CamilaTokisaki#0001
             ''', chatId=chatId, replyTo=id)
 
