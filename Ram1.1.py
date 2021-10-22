@@ -143,8 +143,9 @@ Information - Ram's update list!
     if content.lower().startswith("люблю") or content.lower().startswith("love"):
         if translator == "ru":
             sub_client.send_message(message="Я тоже тебя люблю", chatId=chatId, replyTo=id)
-        if translator == "en":
+        elif translator == "en":
             sub_client.send_message(message="I love you too", chatId=chatId, replyTo=id)
+
     if content.lower().startswith("lovers") or content.lower().startswith("любовь"):
         mentions = data.message.extensions.get('mentionedArray')
         if mentions != None and len(mentions) == 2:
@@ -153,7 +154,7 @@ Information - Ram's update list!
                 sub_client.send_message(
                     message=f"Вероятность того, что {pidorasi[0]} и {pidorasi[1]} любят друг друга равно {random.randint(0, 100)}%",
                     chatId=chatId)
-            if translator == "en":
+            elif translator == "en":
                 sub_client.send_message(
                     message=f"The probability that  {pidorasi[0]} and {pidorasi[1]} love each other: {random.randint(0, 100)}%",
                     chatId=chatId)
