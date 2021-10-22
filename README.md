@@ -1,5 +1,7 @@
  # Инструменты и скелет для Amino
 
+[English version of this manual](https://github.com/CamilaTokisaki/amino-bot_and_tools/blob/main/READMEen.md)
+
 Всем привет, это набор инструментов для создания своего бота для Amino, так же, вы можете уже использовать скелет Ram как основу для своего бота, если будете соблюдать условия лицензии
 
 ## Установка
