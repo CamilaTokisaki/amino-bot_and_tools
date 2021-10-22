@@ -1,6 +1,6 @@
-# Инструменты и скелет для Amino
+# Tools and Skeleton for Amino
 
-Всем привет, это набор инструментов для создания своего бота для Amino, так же, вы можете уже использовать скелет Ram как основу для своего бота, если будете соблюдать условия лицензии
+Hi all, this is a set of tools for creating your own bot for Amino, as well, you can already use the Ram skeleton as the basis for your bot, if you comply with the license conditions
 
 ## Installation
 It is worth noting beforehand that in order to run the bot or tools it is advisable to use a computer, you can also use a phone, but that is a separate topic I will not cover.
