@@ -16,6 +16,7 @@ pip uninstall Amino.py #Это удалит бибилиотеку Amino.py ес
 ```
 ```py
 python -m pip install Amino.ed
+pip install gTTS
 ```
 Пред запуском бота, настройте файл, а после запустите файл:
 ```py
