@@ -1,8 +1,7 @@
 import threading
 import random
-import amino
+import aminofix
 import time
-import gtts
 
 from threading import Thread
 from gtts import gTTS
@@ -19,9 +18,9 @@ if __name__ == "__main__":
 
 
     chat_information = {}
-    client = amino.Client(); methods = []
-    client.login(email="Here's your password", password="here's your login")
-    sub_client = amino.SubClient(comId="and here's your amino ID", profile=client.profile)
+    client = aminofix.Client(); methods = []
+    client.login(email="here's your login", password="Here's your password")
+    sub_client = aminofix.SubClient(comId="and here's your amino ID", profile=client.profile)
     reloadTime = time.time() + 170
     if translator == "ru":
         print(f"Я стартовала на аккаунте: {sub_client.profile.nickname}")
@@ -33,7 +32,7 @@ if __name__ == "__main__":
     av = []
     nom = 0
 
-def on_message(data: amino.objects.Event):
+def on_message(data: aminofix.objects.Event):
     global ban
     global tim
     global nom
@@ -168,55 +167,34 @@ Information - Ram's update list!
     if content.lower().startswith("информация") or content.lower().startswith("information"):
         if translator == "ru":
             sub_client.send_message(message='''
-[B]Обновления: 1.1
-
-Это самое крупное обновления со времён создания Рам!
+[B]Обновления: 1.1.1
 
 ==Изменения:==
--Полный перенос Рам на условно новую библиотеку
--Добавлены команды "Онлайн", "Онлайн", "Инфо", "Гс" и "СуперЧистка"
--Улучшена защита для команд администраторов
--Полный перевод Рам в Русский режим
--Полная независимость от пунктуальности, теперь можно писать хоть так "КоМаНдЫ"
--Переименование многих команд
--Статичное обновление Сокета, для работы Рам (Да-да, теперь не надо её перезапускать каждые 5 секунд)
--Независимость перед отсутствием прав администратора
--Добавлен русский и английский язык в коде
+-Полный перенос Рам на условно новую библиотеку, дважды))
+-Сделаны мини исправления
 
 ==Удалено:==
--Старая бибилиотека бота
--Команда "эй", да, теперь Рам не будет извиняться перед вами
--Префиксы! Да, больше никаких префиксов, только слова! (они есть но только в админских командах)
--Анти-рейд код из за ненадобности
+-Старая бибилиотека бота, тоже дважды)
 ''', chatId=chatId)
         elif translator == "en":
             sub_client.send_message(message='''
-[B]Update: 1.1
+[B]Update: 1.1.1
 
 This is the biggest update since the creation of Ram!
 
 ==Changes:==
--Complete porting of Ram to a provisionally new library
--Added "Online", "Online", "Info", "Gs" and "Super Clean" commands
--Improved protection for admin commands
--Full transition of Ram to rusian mode
--Full independence of punctuality, now you can write "KoMaNdY" like this
--Naming of many teams
--Static update Socket, to work Ram (yes, no need to restart it every 5 seconds)
--Independent before no admin rights
--Added rusian and enlish language to the code
+-Full transfer of Ram to a conditional new library, twice))
+
 
 ==Removed:==
--Old bot library
--The "hey" command, yes, now Ram won't apologize to you
--Prefixes! Yes, no more prefixes, just words! (they are there but only in admin commands)
--Anti-raid code out of necessity.
+-Old bot bibliography, also twice)
+-Minimum corrections have been made
 ''', chatId=chatId)
 
     if content.lower().startswith("создательница") or content.lower().startswith("creator"):
         if translator == "ru":
             sub_client.send_message(message='''
-Версия бота 1.1
+Версия бота 1.1.1
 
 ==Создательница:==
 Дискорд - CamilaTokisaki#5351
@@ -228,11 +206,11 @@ github - https://github.com/CamilaTokisaki
 WildNightFox - За помощь с переносом библиотеки и доп командой
 Его дискорд: WildNightFox#9154
 
-И всё, больше я никому не блвгодарна :3
+И всё, больше я никому не благодарна :3
 ''', chatId=chatId)
         elif translator == "en":
             sub_client.send_message(message='''
-Bot version 1.1
+Bot version 1.1.1
 
 ==Creator:==
 Discord - CamilaTokisaki#5351
@@ -244,7 +222,7 @@ E-mail - camilatokisakideveloper@gmail.com
 WildNightFox - For help with migrating the library and adding commands
 His discord: WildNightFox#9154
 
-That's it, I'm not thankful to anyone else :3
+And that's it, I'm not grateful to anyone else :3
 ''', chatId=chatId)
 
     if content.lower().startswith("действия") or content.lower().startswith("actions"):
@@ -252,89 +230,89 @@ That's it, I'm not thankful to anyone else :3
             sub_client.send_message(message='''
 [B]Действия:
 
-.cuddle - Прижаться
-.feed - Покормить
-.hug - Обнять
-.kiss - Поцеловать
-.pat - Погладить
-.poke - Тыкнуть
-.slap - ударить
-.tickle - Пощекотать
-.kus - делать кусь
+щекочет - Прижаться
+кормит - Покормить
+обнимает - Обнять
+целует - Поцеловать
+гладит - Погладить
+тыкает - Тыкнуть
+бьёт - ударить
+щекочет - Пощекотать
+кусает - делать кусь
 ''', chatId=chatId)
 
         elif translator == "en":
             sub_client.send_message(message='''
 [B]Actions:
 
-.cuddle - Cuddle up
-.feed - feed
-.hug - Hug
-.kiss - Kiss
-.pat - Stroke
-.poke - Poke
-.slap - slap
-.tickle - Tickle
-.kus - give a bite
+cuddle - Cuddle up
+feed - feed
+hug - Hug
+kiss - Kiss
+pat - Stroke
+poke - Poke
+slap - slap
+tickle - Tickle
+kus - give a bite
 ''', chatId=chatId)
 
-    if content.lower().startswith(".tickle"):
+    if content.lower().startswith("tickle") or content.lower().startswith("щекочет"):
         author2 = data.message.content.split("@")[1].replace("@", "")[0:50]
         if translator == "ru":
             sub_client.send_message(message=f'{data.message.author.nickname} щекочет {author2}', chatId=chatId)
         elif translator == "en":
             sub_client.send_message(message=f'{data.message.author.nickname} tickles {author2}', chatId=chatId)
 
-    if content.lower().startswith(".slap"):
+    if content.lower().startswith("slap") or content.lower().startswith("бьёт"):
         author2 = data.message.content.split("@")[1].replace("@", "")[0:50]
         if translator == "ru":
             sub_client.send_message(message=f'{data.message.author.nickname} бьёт {author2}', chatId=chatId)
         elif translator == "en":
             sub_client.send_message(message=f'{data.message.author.nickname} beats {author2}', chatId=chatId)
 
-    if content.lower().startswith(".poke"):    
+    if content.lower().startswith("poke") or content.lower().startswith("тыкает"):    
         author2 = data.message.content.split("@")[1].replace("@", "")[0:50]
         if translator == "ru":
             sub_client.send_message(message=f'{data.message.author.nickname} тыкает в {author2}', chatId=chatId)
         elif translator == "en":
             sub_client.send_message(message=f'{data.message.author.nickname} pokes at {author2}', chatId=chatId)
 
-    if content.lower().startswith(".pat"):
+    if content.lower().startswith("pat") or content.lower().startswith("гладит"):
         author2 = data.message.content.split("@")[1].replace("@", "")[0:50]
         if translator == "ru":
             sub_client.send_message(message=f'{data.message.author.nickname} гладит {author2}', chatId=chatId)
         elif translator == "en":
             sub_client.send_message(message=f'{data.message.author.nickname} gently strokes {author2}', chatId=chatId)
 
-    if content.lower().startswith(".hug"):
+    if content.lower().startswith("hug") or content.lower().startswith("обнимает"):
         author2 = data.message.content.split("@")[1].replace("@", "")[0:50]
         if translator == "ru":
             sub_client.send_message(message=f'{data.message.author.nickname} обнимает {author2}', chatId=chatId)
         elif translator == "en":
             sub_client.send_message(message=f'{data.message.author.nickname} hugs {author2}', chatId=chatId)
 
-    if content.lower().startswith(".feed"):
+    if content.lower().startswith("feed") or content.lower().startswith("кормит"):
         author2 = data.message.content.split("@")[1].replace("@", "")[0:50]
         if translator == "ru":
             sub_client.send_message(message=f'{data.message.author.nickname} кормит {author2}', chatId=chatId)
         elif translator == "en":
             sub_client.send_message(message=f'{data.message.author.nickname} feeds {author2}', chatId=chatId)
 
-    if content.lower().startswith(".cuddle"):
+    if content.lower().startswith("cuddle") or content.lower().startswith("прижимается"):
         author2 = data.message.content.split("@")[1].replace("@", "")[0:50]
         if translator == "ru":
             sub_client.send_message(message=f'{data.message.author.nickname} прижимается к {author2}', chatId=chatId)
         elif translator == "en":
             sub_client.send_message(message=f'{data.message.author.nickname} snuggles up to {author2}', chatId=chatId)
 
-    if content.lower().startswith(".kiss"):
+    if content.lower().startswith("kiss") or content.lower().startswith("целует"):
         author2 = data.message.content.split("@")[1].replace("@", "")[0:50]
         if translator == "ru":
             sub_client.send_message(message=f'{data.message.author.nickname} целует {author2}', chatId=chatId)
         elif translator == "en":
             sub_client.send_message(message=f'{data.message.author.nickname} kisses {author2}', chatId=chatId)
 
-    if content.lower().startswith(".kus"):
+    if content.lower().startswith("kus") or content.lower().startswith("кусает"):
         author2 = data.message.content.split("@")[1].replace("@", "")[0:50]
         if translator == "ru":
             sub_client.send_message(message=f'{data.message.author.nickname} делает кусь {author2}', chatId=chatId)
