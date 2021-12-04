@@ -5,7 +5,7 @@ Hi all, this is a set of tools for creating your own bot for Amino, as well, you
 ## Installation
 It is worth noting beforehand that in order to run the bot or tools it is advisable to use a computer, you can also use a phone, but that is a separate topic I will not cover.
 To run it you need to install Python (https://www.python.org/downloads/). You can find an installation guide on YouTube or in an article about it.
-Next we need Amino.ed library, why not just Amino.py? That's easy, we need a working bot and tools, not a useless piece of brick
+Next we need Amino.fix library, why not just Amino.py or Amino.ed? That's easy, we need a working bot and tools, not a useless piece of brick
 To install Amino.fix You need:
 ____
 Run CMD as administrator and write
