@@ -1,5 +1,7 @@
 # Tools and Skeleton for Amino
 
+## The project is closed due to lack of libraries to work with!
+
 Hi all, this is a set of tools for creating your own bot for Amino, as well, you can already use the Ram skeleton as the basis for your bot, if you comply with the license conditions
 
 ## Installation
